@@ -10,7 +10,7 @@ export const useRouter = () => {
 };
 
 export const handleRouter = (app: Express) => {
-  const routesDir = path.join(__dirname, "../routes");
+  const routesDir = path.resolve("src/routes");
   const routesFiles = fs.readdirSync(routesDir);
 
   routesFiles.forEach((file) => {
