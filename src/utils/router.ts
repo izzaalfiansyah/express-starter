@@ -8,7 +8,11 @@ export const handleRouter = (app: Express) => {
 
   routesFiles.forEach((file) => {
     const router: Router = require(path.join(routesDir, file)).default;
-    app.use(`/${file.replace(".ts", "")}`, router);
+    const filePath = file.includes("index.ts")
+      ? "/"
+      : `/${file.replace(".ts", "")}`;
+
+    app.use(filePath, router);
   });
 };
 
