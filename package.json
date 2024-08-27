@@ -2,11 +2,11 @@
   "name": "anterin-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts",
-    "build": "ts-node src/index.ts"
+    "dev": "nodemon index.ts",
+    "build": "ts-node index.ts"
   },
   "keywords": [],
   "author": "",
